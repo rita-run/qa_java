@@ -1,7 +1,10 @@
 package com.example;
+
 import org.junit.Test;
+
 import java.util.List;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class CatTest {
 
@@ -11,7 +14,7 @@ public class CatTest {
         Cat cat = new Cat(feline);
         String actual = cat.getSound();
         String expected = "Мяу";
-        assertEquals(expected, actual);
+        assertEquals("Кошка должна мяукать!", expected, actual);
     }
 
     @Test
@@ -21,5 +24,6 @@ public class CatTest {
         List<String> actual = cat.getFood();
         List<String> expected = List.<String>of("Животные", "Птицы", "Рыба");
         assertEquals(expected, actual);
+        assertEquals("Кошки - это хищники, они должны питаться мясом!", expected, actual);
     }
 }
